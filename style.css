@@ -1,0 +1,148 @@
+/* Add some basic styles for the form */
+body {
+  background-image: url("Img/background2.jpeg");
+  /* animation: gradient 10s infinite alternate linear; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  margin-top: 200px;
+  margin-left: 800px;
+  /* width: 100%;
+  height: 100%; */
+}
+
+.animated-image {
+  position: fixed;
+  top: 5%;
+  transform: translateY(-10%);
+  animation: move-right 3s infinite linear;
+}
+
+.animated-image img {
+  width: 200px;
+  height: 200px;
+}
+
+@keyframes move-right {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: calc(100vw - 100px);
+  }
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.889);
+}
+
+label {
+  color: yellow;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+button {
+  background-color: rgba(255, 255, 0, 0.675);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+.chatbot-logo {
+  position: fixed;
+  bottom: 10px;
+  right: 250px; /* Change right to left */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000000db; /* Change background color to black */
+  color: #fff; /* Change text color to white */
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.chatbot-logo img {
+  height: 30px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.chatbot-logo:hover {
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chatbot-options {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.chatbot-options.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.chatbot-options button {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #2196f3;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.chatbot-options button:hover {
+  background-color: #0c7cd5;
+}
+
+/* Optional: add some background and font styles to the page */
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}

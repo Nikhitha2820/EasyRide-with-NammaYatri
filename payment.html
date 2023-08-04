@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ride Confirmed</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+      }
+
+      h1 {
+        margin: 0;
+      }
+
+      main {
+        padding: 20px;
+      }
+
+      form label {
+        display: inline-block;
+        width: 100px;
+      }
+
+      form input[type="radio"] {
+        margin-right: 10px;
+      }
+
+      form button {
+        margin-top: 10px;
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      form button:hover {
+        background-color: #111;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Ride Confirmed</h1>
+    </header>
+
+    <main>
+      <p>Your ride has been confirmed. Please choose a payment method:</p>
+      <form>
+        <label for="cash">Cash</label>
+        <input type="radio" name="payment-method" id="credit-card" />
+        <br />
+        <label for="card">Phonepe</label>
+        <input type="radio" name="payment-method" id="debit-card" />
+        <br />
+        <label for="paypal">Other UPI</label>
+        <input type="radio" name="payment-method" id="paypal" />
+        <br />
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Namma Yatri Website</p>
+    </footer>
+  </body>
+</html>

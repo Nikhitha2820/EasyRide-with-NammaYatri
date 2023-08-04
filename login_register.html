@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login 3</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,0"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="login">
+      <div class="avatar">
+        <img src="avathar.jpeg" />
+      </div>
+      <!-- <h2>Login</h2> -->
+      <h3>Welcome...🙏</h3>
+
+      <form class="login-form">
+        <div class="textbox">
+          <input type="email" placeholder="Username" />
+          <span class="material-symbols-outlined"> account_circle </span>
+        </div>
+        <div class="textbox">
+          <input type="password" placeholder="Password" />
+          <span class="material-symbols-outlined"> lock </span>
+        </div>
+        <button type="submit" id="login-btn">LOGIN</button>
+        <a href="http://127.0.0.1:5500/register.html"
+          >Not an user yet? Register here</a
+        >
+      </form>
+    </div>
+    <script>
+      const loginBtn = document.getElementById("login-btn");
+      loginBtn.addEventListener("click", () => {
+        window.location.href = "index_main.html";
+      });
+    </script>
+  </body>
+</html>

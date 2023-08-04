@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Namma Yatri Ride Booking</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <form id="ride-booking-form">
+      <label for="pickup">Pickup location:</label>
+      <input type="text" id="pickup" name="pickup" required />
+      <label for="dropoff">Drop-off location:</label>
+      <input type="text" id="dropoff" name="dropoff" required />
+      <label for="phone">Phone number:</label>
+      <input type="tel" id="phone" name="phone" required />
+      <!-- <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required /> -->
+      <button type="submit" id="availcheck-btn">Check Available Rides</button>
+    </form>
+
+    <div class="animated-image">
+      <img src="Img/auto-anime.gif" alt="Animated Image" />
+    </div>
+
+    <script>
+      const checkbtn = document.getElementById("availcheck-btn");
+      checkbtn.addEventListener("click", () => {
+        window.location.href = "maps_main.html";
+      });
+    </script>
+
+    <div class="chatbot-logo" onclick="openChatbot()">
+      <img src="Img/chatbot-logo.png" alt="Chatbot Logo" />
+      <p>Looking for other options??</p>
+    </div>
+
+    <script>
+      // Add some interactivity to the form
+      const form = document.querySelector("#ride-booking-form");
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const pickup = form.elements.pickup.value;
+        const dropoff = form.elements.dropoff.value;
+        const phone = form.elements.phone.value;
+        const email = form.elements.email.value;
+        const paymentoption = form.elements.console.log(
+          `Booking ride from ${pickup} to ${dropoff} for ${phone} (${email})`
+        );
+        // Add code here to send the booking request to the server
+      });
+
+      function openChatbot() {
+        // Remove the chatbot logo
+        const chatbotLogo = document.querySelector(".chatbot-logo");
+        chatbotLogo.remove();
+        const message = "Hi, I need help booking a ride";
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappUrl = `https://wa.me/1234567890?text=${encodedMessage}`;
+        const fillDetailsUrl = "fill-details.html";
+
+        const chatbotOptions = document.createElement("div");
+        chatbotOptions.innerHTML = `
+        <h3>How would you like to contact us?</h3>
+        <button id="whatsapp-btn">WhatsApp</button>
+        <button id="direct-contact-btn">Direct Contact</button>
+      `;
+
+        document.body.appendChild(chatbotOptions);
+
+        document
+          .getElementById("whatsapp-btn")
+          .addEventListener("click", () => {
+            window.open(whatsappUrl, "_blank");
+            chatbotOptions.remove();
+          });
+
+        document
+          .getElementById("direct-contact-btn")
+          .addEventListener("click", () => {
+            window.location.href = fillDetailsUrl;
+            chatbotOptions.remove();
+          });
+      }
+    </script>
+  </body>
+</html>
